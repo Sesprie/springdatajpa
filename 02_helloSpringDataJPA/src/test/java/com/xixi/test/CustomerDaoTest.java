@@ -21,6 +21,9 @@ public class CustomerDaoTest {
 	
 	/**
 	 * 根据id查询
+	 * findOne和getOne的区别在于
+	 * findOne调用的是em.find()
+	 * getOne调用的是em.getReference()
 	 */
 	@Test
 	public void testFindOne() {
@@ -71,10 +74,24 @@ public class CustomerDaoTest {
 		}
 	}
 	
+	/**
+	 * 测试Count
+	 */
+	@Test
+	public void testCount() {
+		Long count = customerDao.count();
+		System.out.println(count);
+	}
 	
 	
-	
-	
+	/**
+	 * 测试exists
+	 */
+	@Test
+	public void testExists() {
+		boolean res = customerDao.exists(1l);
+		System.out.println(res);
+	}
 	
 	
 	

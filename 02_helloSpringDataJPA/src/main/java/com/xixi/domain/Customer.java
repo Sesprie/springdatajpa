@@ -9,6 +9,10 @@ import javax.persistence.Table;
 
 import lombok.Data;
 
+
+/*
+ * 使用lombok插件需要为ide装上插件，同时还需要已provided的方式引入jar包
+ */
 @Entity
 @Table(name = "t_customer")
 @Data

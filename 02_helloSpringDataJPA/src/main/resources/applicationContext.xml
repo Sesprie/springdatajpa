@@ -58,6 +58,7 @@
 		
 		
 		<!-- 整合Spring Data Jpa -->
+		<!-- 对指定包下的类进行动态代理增强，即给定实现类对象 -->
 		<jpa:repositories base-package="com.xixi.dao"
 		 					transaction-manager-ref="transactionManager" 
 		 					entity-manager-factory-ref="entityManagerFactory"> 
